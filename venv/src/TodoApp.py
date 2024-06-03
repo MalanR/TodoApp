@@ -17,11 +17,14 @@ print("5) View all Tasks")
 print("6) Search Tasks")
 print("7) Exit")
 
-#file handeling
+# file handeling
 task_file = 'tasks.json'
+
+
 def store_tasks(tasks):
     with open(task_file, 'w') as file:
         json.dump(tasks, file, cls=DateTimeEncoder)
+
 
 def load_tasks():
     if os.path.exists(task_file):
@@ -32,8 +35,9 @@ def load_tasks():
                     return json.loads(content, object_hook=as_datetime)
         except json.JSONDecodeError:
             print("Error reading the task file")
-            return{}
+            return {}
     return {}
+
 
 # This is the main class, it stores an empty array, our tasks being added will be appended to this empty array.
 class TodoList:
@@ -49,6 +53,33 @@ class TodoList:
             print("--------------------------------------------------------------------")
 
     # start building the async functions based on user input
+
+    async def user_action(todo_list):
+        user_choice = {
+            '1': todo_list.add_task,
+            '2': todo_list.delete_task,
+            '3': todo_list.update_task,
+            '4': todo_list.complete_task,
+            '5': todo_list.print_todos,
+            # '6': todo_list.search_task,
+            '7': lambda: print('Goodbey')
+        }
+
+        while True:
+            choice = str(input('Please enter your choice:'))
+            action = user_choice.get(choice)
+            if action:
+                if choice == '5':
+                    todo_list.print_todos()
+                else:
+                    task_id = str(input('Please enter task ID: '))
+                    await action(task_id)
+                if choice == '7':
+                    break
+            else:
+                print('Invalid entry')
+
+    # function for adding tasks
     async def add_task(self, description):
         task_id = str(uuid.uuid4())
         new_task = {
@@ -62,6 +93,7 @@ class TodoList:
         print(f"Task '{description}' added with ID {task_id}")
         return (task_id, description)
 
+    # function for deleting tasks
     async def delete_task(self, task_id):
         if task_id in self.todos:
             del self.todos[task_id]
@@ -70,17 +102,16 @@ class TodoList:
         else:
             print(f"Task with ID {task_id} not found. ")
 
+    # function for updating tasks
     async def update_task(self, task_id, task_description):
         if task_id in self.todos:
-            task_description
+            self.todos[task_id]['description'] = task_description
             store_tasks(self.todos)
-            print(f"Task with ID {task_id} has been updated. ")
+            print(f"Task with ID {task_id} has been updated with {task_description}. ")
         else:
             print(f"Task with ID {task_id} not found. ")
 
-    async def filters(self, task_id):
-
-
+    # function for marking tasks as complete
     async def complete_task(self, task_id):
         if task_id in self.todos:
             self.todos[task_id]['completed_at'] = datetime.datetime.now()
@@ -89,26 +120,9 @@ class TodoList:
         else:
             print("Invalid task ID")
 
+    async def filters(self, task_id):
 
-
-async def user_choice(todo_list):
-    while True:
-        choice = str(input("Please enter your choice: "))
-        if choice == '1':
-            description = str(input("Please enter the task you want to add: ")).lower()
-            await todo_list.add_task(description)
-        elif choice == '2':
-            task_id = str(input("Please enter the ID of the task you want to delete: "))
-            await todo_list.delete_task(task_id)
-        elif choice == '4':
-            task_id = str(input("Please enter the the ID of the task you completed: "))
-            await todo_list.complete_task(task_id)
-        elif choice == '5':
-            print("\n")
-            todo_list.print_todos()
-        else:
-            print("Invalid entry")
 
 
 my_todo_list = TodoList()
-asyncio.run(user_choice(my_todo_list))
+asyncio.run(my_todo_list.user_action())
