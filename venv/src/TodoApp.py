@@ -54,15 +54,16 @@ class TodoList:
 
     # start building the async functions based on user input
 
-    async def user_action(todo_list):
+    async def user_action(todo_list, user_input=None):
         user_choice = {
             '1': todo_list.add_task,
             '2': todo_list.delete_task,
             '3': todo_list.update_task,
             '4': todo_list.complete_task,
             '5': todo_list.print_todos,
-            # '6': todo_list.search_task,
-            '7': lambda: print('Goodbey')
+            '6': todo_list.search_task,
+            '7': lambda: None
+
         }
 
         while True:
@@ -71,11 +72,16 @@ class TodoList:
             if action:
                 if choice == '5':
                     todo_list.print_todos()
-                else:
-                    task_id = str(input('Please enter task ID: '))
-                    await action(task_id)
-                if choice == '7':
+                elif choice == '6':
+                    user_search = str(input(
+                        "1) Incomplete Tasks \n2) Completed Tasks\n3) Search a word from a task\nEnter your choice: "))
+                    await todo_list.search_task(user_search)
+                elif choice == '7':
+                    print("GoodBye")
                     break
+                else:
+                    task_id = str(input('Enter the task ID'))
+                    await action(task_id)
             else:
                 print('Invalid entry')
 
@@ -120,8 +126,32 @@ class TodoList:
         else:
             print("Invalid task ID")
 
-    async def filters(self, task_id):
+    async def search_task(self, user_input):
+        filtered_tasks = []
+        if user_input == '1':
+            for task_id, task in self.todos.items():
+                if task['completed_at'] is None:
+                    filtered_tasks.append(task)
+        elif user_input == '2':
+            for task_id, task in self.todos.items():
+                if task['completed_at'] is not None:
+                    filtered_tasks.append(task)
+        elif user_input == '3':
+            partial_text = str(input("Search for a word in any task: ")).lower()
+            for task_id, task in self.todos.items():
+                if partial_text in task['description'].lower():
+                    filtered_tasks.append(task)
 
+        else:
+            print("Invalid entry.")
+
+        for task in filtered_tasks:
+            print(f"ID: {task['id']}"),
+            print(f"Description: {task['description']}"),
+            print(f"Created at: {task['created_at']}"),
+            print(f"Completed at: {task['completed_at']}"),
+            print("--------------------------------------------------------------------")
+        return filtered_tasks
 
 
 my_todo_list = TodoList()
