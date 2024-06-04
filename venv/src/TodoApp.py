@@ -39,7 +39,7 @@ def load_tasks():
 
 # Defining the TodoList class and initializing it by loading existing tasks
 class TodoList:
-    # loading the existing tasks from the json file to the todo list
+    # loading the existing tasks from the json file to the todolist
 
     @staticmethod
     def new():
@@ -111,7 +111,7 @@ class TodoList:
             "completed_at": None
         }
 
-        #  adding the new task to the todo list dictionary.
+        #  adding the new task to the todolist dictionary.
         self.todos[task_id] = new_task
 
         #  store the new task in the json file.
@@ -217,5 +217,5 @@ class TodoList:
 # create a new instance of the TodoList by using the static factory method.
 my_todo_list = TodoList.new()
 
-# run the user_action method to be able to interact with the todo list.
+# run the user_action method to be able to interact with the todolist.
 asyncio.run(my_todo_list.user_action())
