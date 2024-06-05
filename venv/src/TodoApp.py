@@ -59,45 +59,85 @@ class TodoList:
             print("--------------------------------------------------------------------")
 
     async def user_action(self):
+        while True:
         # while loop for the user to see what their options are in the app.
         # created as a while loop so that this "menu" displays after each action the user makes.
-        while True:
-            print("\n1) Add a Task")
-            print("2) Remove a Task")
-            print("3) Update a Task")
-            print("4) Complete a Task")
-            print("5) View all Tasks")
-            print("6) Search Tasks")
-            print("7) Exit")
 
-            # prompting the user to enter their choice of action
-            choice = input('Please enter your choice: ')
+            crud_operations = {
+                1: self.add_task,
+                2: self.delete_task,
+                3: self.update_task,
+                4: self.complete_task,
+                5: self.print_todos,
+                6: self.search_task,
+                7: lambda: print("Goodbye") or exit()
+            }
 
-            # very basic if and elif statements to handel the users actions and return the correct method.
-            if choice == '1':
-                description = input('Please enter a task description: ')
-                await self.add_task(description)
-            elif choice == '2':
-                task_id = input('Enter the task ID to remove: ')
-                await self.delete_task(task_id)
-            elif choice == '3':
-                task_id = input('Enter the task ID to update: ')
-                updated_description = input('Enter the updated task description: ')
-                await self.update_task(task_id, updated_description)
-            elif choice == '4':
-                task_id = input('Enter the task ID to complete: ')
-                await self.complete_task(task_id)
-            elif choice == '5':
-                self.print_todos()
-            elif choice == '6':
-                user_search = input("1) Incomplete Tasks\n2) Completed Tasks\n3) Search a word from a task\nEnter "
-                                    "your choice: ")
-                await self.search_task(user_search)
-            elif choice == '7':
-                print("Goodbye")
-                break
-            else:
-                print('Invalid entry')
+            try:
+                user_input = int(input(
+                    "1)\033[92m Add Task\033[0m\n2)\033[92m Delete a task\033[0m\n3)\033[92m Update a task\033["
+                    "0m\n4)\033[92m Complete a task\033[0m\n5)\033[92m View"
+                    "all tasks\033[0m\n6)\033[92m Filter tasks\033[0m\n7)\033[93m Exit\033[0m\nChoose an option: "))
+
+                # Checking for a match in the user input and the crud dictionary.
+                if user_input in crud_operations:
+
+                    # check if the user has entered option 1, if so we do not require the tasks ID.
+                    if user_input == 1:
+
+                        # get the task name/description from the user.
+                        description = input("Enter task description: ")
+
+                        # Await the add_task function to execute.
+                        await crud_operations[user_input](description)
+
+                    #     check if the user input is 2,3 or 4, these require an existing tasks ID
+                    elif user_input in [2, 3, 4]:
+
+                        # take in the tasks ID
+                        task_id = input("Enter task ID: ")
+
+                        # check if the input is 3
+                        if user_input == 3:
+
+                            # get the new task name/description from the user
+                            task_description = input("Enter new task description: ")
+
+                            # Await the update_task function to execute.
+                            await crud_operations[user_input](task_id, task_description)
+                        else:
+
+                            # Await the corresponding function to execute based on the crud_operation dictionary and
+                            # the user's input.
+                            await crud_operations[user_input](task_id)
+
+                    #         if the user input is 6, we need to print the filter options the users has.
+                    elif user_input == 6:
+                        print("\n1) Incomplete Tasks")
+                        print("2) Completed Tasks")
+                        print("3) Search by Text")
+
+                        # take in the users choice.
+                        search_choice = input('Please choose a search option: ')
+
+                        # Await the search_task function to execute.
+                        await crud_operations[user_input](search_choice)
+                    else:
+
+                        # check if the selected function is a coroutine function, if it is, await the execution of
+                        # the selected function, otherwise execute immediately.
+                        if asyncio.iscoroutinefunction(crud_operations[user_input]):
+                            await crud_operations[user_input]()
+                        else:
+                            crud_operations[user_input]()
+                else:
+
+                    # display a message if the user enters a number that is not within the defined range
+                    print("\033[91mInvalid Entry\033[0m")
+            except ValueError:
+
+                # ValueError incase the user's input is not an integer.
+                print("\033[91mYou did not enter an integer\033[0m")
 
     async def add_task(self, description):
         # generating an task ID for each task by using UUID.
