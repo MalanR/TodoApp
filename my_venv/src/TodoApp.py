@@ -3,7 +3,7 @@ import asyncio
 import datetime
 import json
 import os
-from DateTimEencoder import DateTimeEncoder, as_datetime
+from my_venv.src.DateTimEencoder import DateTimeEncoder, as_datetime
 
 # initial greeting on first run of the program.
 print('________________________________________________________')
@@ -38,10 +38,12 @@ def load_tasks():
 
 
 # Defining the TodoList class and initializing it by loading existing tasks
+# Todo Change todoApp
 class TodoList:
     # loading the existing tasks from the json file to the todolist
 
     @staticmethod
+    # use new to start a new blank todo list from scratch.
     def new():
         return TodoList()
 
