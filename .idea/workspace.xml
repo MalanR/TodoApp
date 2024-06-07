@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b48903ac-fa77-44c2-a201-380023ade839" name="Changes" comment="moved files over to venv" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MalanR&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MalanR/TodoApp.git&quot;,
+    &quot;accountId&quot;: &quot;d5ff4c30-e449-47ac-ab53-ebfe7f355bb0&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/my_venv/src/DateTimEencoder.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2hNw3qaSR9utykWIQMqNZcPAE9u" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.pytest for test_TodoApp.test_add_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_TodoApp.test_complete_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_TodoApp.test_load_tasks_empty_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_TodoApp.test_search_task.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TodoApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;malan-branch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/malan/OneDrive/Desktop/Coding/python-training&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malan\Desktop\Todo App\TodoApp\my_venv" />
+      <recent name="C:\Users\malan\Desktop\Todo App\TodoApp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="pytest for test_TodoApp.test_add_task" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TodoApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_venv/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_TodoApp.test_add_task&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_TodoApp.test_complete_task" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TodoApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_venv/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_TodoApp.test_complete_task&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_TodoApp.test_load_tasks_empty_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TodoApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_venv/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_TodoApp.test_load_tasks_empty_file&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_TodoApp.test_search_task" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TodoApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_venv/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_TodoApp.test_search_task&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_TodoApp.test_add_task" />
+        <item itemvalue="Python tests.pytest for test_TodoApp.test_load_tasks_empty_file" />
+        <item itemvalue="Python tests.pytest for test_TodoApp.test_complete_task" />
+        <item itemvalue="Python tests.pytest for test_TodoApp.test_search_task" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b48903ac-fa77-44c2-a201-380023ade839" name="Changes" comment="" />
+      <created>1717447646567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717447646567</updated>
+    </task>
+    <task id="LOCAL-00001" summary="added lookup table for user choice">
+      <option name="closed" value="true" />
+      <created>1717454332836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717454332836</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed filters and partial search functionality.">
+      <option name="closed" value="true" />
+      <created>1717459168445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717459168445</updated>
+    </task>
+    <task id="LOCAL-00003" summary="broke the code down for better understanding and explanation.">
+      <option name="closed" value="true" />
+      <created>1717530877783</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717530877783</updated>
+    </task>
+    <task id="LOCAL-00004" summary="got rid of the todos">
+      <option name="closed" value="true" />
+      <created>1717530937615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717530937615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added CRUD lookup table and color to console text">
+      <option name="closed" value="true" />
+      <created>1717624466225</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717624466225</updated>
+    </task>
+    <task id="LOCAL-00006" summary="moved files over to venv">
+      <option name="closed" value="true" />
+      <created>1717758752998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717758752998</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added lookup table for user choice" />
+    <MESSAGE value="Fixed filters and partial search functionality." />
+    <MESSAGE value="broke the code down for better understanding and explanation." />
+    <MESSAGE value="got rid of the todos" />
+    <MESSAGE value="added CRUD lookup table and color to console text" />
+    <MESSAGE value="moved files over to venv" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved files over to venv" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="user_input" />
+        <watch expression="user_input" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
