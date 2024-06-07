@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b48903ac-fa77-44c2-a201-380023ade839" name="Changes" comment="moved files over to venv" />
+    <list default="true" id="b48903ac-fa77-44c2-a201-380023ade839" name="Changes" comment="moved files over to venv">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_venv/src/TodoApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_venv/src/TodoApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_venv/src/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/my_venv/src/tasks.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +61,7 @@
     &quot;Python tests.pytest for test_TodoApp.test_search_task.executor&quot;: &quot;Run&quot;,
     &quot;Python.TodoApp.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;malan-branch&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/malan/OneDrive/Desktop/Coding/python-training&quot;
   }
 }</component>
@@ -67,7 +71,7 @@
       <recent name="C:\Users\malan\Desktop\Todo App\TodoApp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.pytest for test_TodoApp.test_add_task">
     <configuration name="pytest for test_TodoApp.test_add_task" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TodoApp" />
       <option name="ENV_FILES" value="" />
